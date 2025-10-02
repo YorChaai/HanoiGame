@@ -1,0 +1,19 @@
+<!-- app/templates/index.html -->
+{% extends "base.html" %}
+
+{% block title %}
+    Beranda
+{% endblock %}
+
+{% block content %}
+    <h1>Selamat Datang di Aplikasi Flask Pertamaku!</h1>
+    <p>Aplikasi ini dibuat secara manual dengan struktur yang rapi1.</p>
+    
+    <br>
+    
+    <!-- INI ADALAH LINK/TOMBOL YANG AKAN KITA TAMBAHKAN -->
+    <a href="{{ url_for('main.about') }}" style="padding: 10px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px;">
+        Ke Halaman Tentang
+    </a>
+
+{% endblock %}
