@@ -6,16 +6,23 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='css/game.css') }}">
 </head>
 <body>
-  <div id="menu">
+  <!-- MENU LEVEL -->
+  <div id="menu" style="text-align:center;">
     <h1>Pilih Level</h1>
-    <div id="levelButtons"></div>
+    <button class="levelBtn" onclick="startLevel(3)">Level 1 (3 Disk)</button>
+    <button class="levelBtn" onclick="startLevel(4)">Level 2 (4 Disk)</button>
+    <button class="levelBtn" onclick="startLevel(5)">Level 3 (5 Disk)</button>
+    <button class="levelBtn" onclick="startLevel(6)">Level 4 (6 Disk)</button>
+    <button class="levelBtn" onclick="startLevel(7)">Level 5 (7 Disk)</button>
   </div>
 
+  <!-- GAME AREA -->
   <div id="gameUI" style="display:none; text-align:center;">
     <button onclick="goHome()">🏠 Home</button>
     <canvas id="gameCanvas" width="800" height="600"></canvas>
   </div>
 
+  <!-- WIN SCREEN -->
   <div id="winScreen" style="display:none; text-align:center;">
     <h1 id="winMessage">ANDA MENANG!</h1>
     <button id="btnNext">Lanjut</button>

@@ -1,25 +1,82 @@
+/* static/css/game.css */
+
+/* Layout utama */
 body {
-  margin: 0;
-  background: #000;
-  color: white;
-  font-family: Arial, sans-serif;
-  text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #1e1e28; /* Sama dengan warna background game */
+    font-family: Arial, sans-serif;
+    color: #fff;
+    text-align: center;
 }
 
-#menu, #winScreen {
-  margin-top: 50px;
+/* Menu */
+#menu {
+    padding-top: 50px;
 }
 
-button {
-  margin: 10px;
-  padding: 10px 20px;
-  font-size: 18px;
-  cursor: pointer;
-  border-radius: 8px;
+#menu h1 {
+    margin-bottom: 20px;
 }
 
-button:disabled {
-  background: #444;
-  color: #aaa;
-  cursor: not-allowed;
+#menu button {
+    background: #4682b4;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+}
+
+#menu button:disabled {
+    background: #555;
+    cursor: not-allowed;
+}
+
+/* Canvas game */
+#gameCanvas {
+    max-width: 100%;
+    max-height: 100%;
+    margin: 20px auto;
+    border: 2px solid #fff;
+    border-radius: 10px;
+
+    /* menjaga ketajaman tampilan */
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    display: none; /* canvas disembunyikan, nanti muncul via JS */
+}
+
+/* Win Screen */
+#winScreen {
+    display: none;
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: #32ff32;
+    font-size: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#winScreen h2 {
+    margin-bottom: 20px;
+}
+
+#winScreen button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    background: #4682b4;
+    color: #fff;
+    cursor: pointer;
 }
