@@ -1,0 +1,22 @@
+<!-- app/templates/game.html -->
+{% extends "base.html" %}
+
+{% block head %}
+<!-- Tambahkan baris ini untuk memanggil CSS -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block title %}
+    Game Menara Hanoi
+{% endblock %}
+
+{% block content %}
+    <h1>Game Menara Hanoi</h1>
+    <p>Game ini sedang dibuat ulang dengan teknologi web.</p>
+
+    <!-- Ini adalah "kanvas" tempat kita akan menggambar game -->
+    <canvas id="gameCanvas" width="800" height="600" style="border: 1px solid black;"></canvas>
+
+    <!-- Panggil file JavaScript kita -->
+    <script src="{{ url_for('static', filename='js/game.js') }}"></script>
+{% endblock %}

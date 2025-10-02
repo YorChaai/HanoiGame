@@ -12,3 +12,7 @@ def home():
 @main_bp.route('/about')
 def about():
     return '<h1>Ini Halaman About</h1><br><a href="' + url_for('main.home') + '">Kembali ke Beranda</a>'
+
+@main_bp.route('/game')
+def game():
+    return render_template('game.html')
