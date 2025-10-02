@@ -1,13 +1,27 @@
-{% extends "base.html" %}
-{% block content %}
-<h1>Game Tower of Hanoi</h1>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Tower of Hanoi</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/game.css') }}">
+</head>
+<body>
+  <div id="menu">
+    <h1>Pilih Level</h1>
+    <div id="levelButtons"></div>
+  </div>
 
-<!-- Canvas untuk game -->
-<canvas id="gameCanvas" width="800" height="600"></canvas>
+  <div id="gameUI" style="display:none; text-align:center;">
+    <button onclick="goHome()">🏠 Home</button>
+    <canvas id="gameCanvas" width="800" height="600"></canvas>
+  </div>
 
-<!-- CSS khusus game -->
-<link rel="stylesheet" href="{{ url_for('static', filename='css/game.css') }}">
+  <div id="winScreen" style="display:none; text-align:center;">
+    <h1 id="winMessage">ANDA MENANG!</h1>
+    <button id="btnNext">Lanjut</button>
+    <button onclick="goHome()">Home</button>
+  </div>
 
-<!-- JS game -->
-<script src="{{ url_for('static', filename='js/game.js') }}"></script>
-{% endblock %}
+  <script src="{{ url_for('static', filename='js/game.js') }}"></script>
+</body>
+</html>
